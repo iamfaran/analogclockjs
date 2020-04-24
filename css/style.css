@@ -1,0 +1,120 @@
+/* Universal Styling  */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+}
+
+body {
+  background-image: linear-gradient(to right, rgb(6, 83, 97), rgb(5, 149, 245));
+  font-size: 1.5rem;
+  display: flex;
+  overflow: hidden;
+}
+#clock {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock {
+  width: 500px;
+  height: 500px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  border: 30px solid rgb(255, 255, 255);
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.1);
+
+  position: relative;
+}
+
+.clock::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.number {
+  position: absolute;
+  /* background-color: red; */
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform: rotate(0);
+}
+.number.number1 {
+  transform: rotate(30deg);
+}
+.number.number2 {
+  transform: rotate(60deg);
+}
+.number.number3 {
+  transform: rotate(90deg);
+}
+.number.number4 {
+  transform: rotate(120deg);
+}
+.number.number5 {
+  transform: rotate(150deg);
+}
+.number.number6 {
+  transform: rotate(180deg);
+}
+.number.number7 {
+  transform: rotate(210deg);
+}
+.number.number8 {
+  transform: rotate(240deg);
+}
+.number.number9 {
+  transform: rotate(270deg);
+}
+.number.number10 {
+  transform: rotate(300deg);
+}
+.number.number11 {
+  transform: rotate(330deg);
+}
+
+.hand {
+  position: absolute;
+  /* width: 10px;
+  height: 40%; */
+  left: 50%;
+  bottom: 50%;
+  background-color: black;
+  transform: translateX(-50%) rotate(0);
+  transform-origin: bottom;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border: 1px solid #ffffff;
+}
+
+.hand.seconds {
+  width: 3px;
+  background-color: red;
+  height: 47%;
+}
+.hand.minutes {
+  width: 7px;
+  background-color: black;
+  height: 40%;
+  z-index: 1;
+}
+
+.hand.hour {
+  width: 9px;
+  background-color: black;
+  height: 30%;
+}
